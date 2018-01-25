@@ -96,9 +96,9 @@ fi
 
 # Задаем приглашение для пользователя и опеределение рута
 if [ `id -un` = root ]; then
-  PS1="┌ ${IRed}\u${Color_Off} [${BPurple}\w${Color_Off}] \n└─ \$ "
+  PS1="┌ ${Red}\u${Color_Off} [${BPurple}\w${Color_Off}] \n└─ \$ "
  else
-PS1="┌ ${IGreen}\u${Color_Off} [${BPurple}\w${Color_Off}] \n└─ \$ "
+PS1="┌ ${Green}\u${Color_Off} [${BPurple}\w${Color_Off}] \n└─ \$ "
 fi
 
 # Предотвращает случайное удаление файлов.
