@@ -1,6 +1,6 @@
 ## Содержание 
 
-Ссылка на статью - <https://imbicile.pp.ru/bash-cveta/>
+Ссылка на статью - <https://imbicile.pp.ru/podsvetka-v-bash/>
 1. .nanorc - Подсветка nano
 2. .bashrc - Конфигурация bash
 3. .dircolors - Подсветка ls. Дополнение к .bashrc
