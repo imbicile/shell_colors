@@ -4,6 +4,10 @@
 # Цвета папок dircolors https://github.com/trapd00r/LS_COLORS
 
 
+
+#########
+
+
 # Сброс
 Color_Off='\e[0m'       # Text Reset
 
