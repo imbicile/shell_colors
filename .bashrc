@@ -3,11 +3,6 @@
 # Функции и прочие примеры http://dotshare.it/category/shells/bash/
 # Цвета папок dircolors https://github.com/trapd00r/LS_COLORS
 
-
-
-#########
-
-
 # Сброс
 Color_Off='\e[0m'       # Text Reset
 
@@ -107,6 +102,9 @@ fi
 
 # Предотвращает случайное удаление файлов.
 alias mkdir='mkdir -p'
+
+# Автопуть
+shopt -s autocd
 
 # Подключаем dircolors
 if [ -x /usr/bin/dircolors ]; then
