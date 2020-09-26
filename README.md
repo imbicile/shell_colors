@@ -1,3 +1,5 @@
+![alt text][img.png]
+
 ## Содержание 
 
 Ссылка на статью - <https://imbicile.pp.ru/podsvetka-v-bash/>
