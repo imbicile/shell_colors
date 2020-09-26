@@ -95,9 +95,9 @@ fi
 
 # Задаем приглашение для пользователя и опеределение рута
 if [ `id -un` = root ]; then
-  PS1="${BIRed}┌ ${BIWhite}[${BIRed}\u@\h${Color_Off}${BIWhite}]-[${BICyan}\w${Color_Off}${BIWhite}]\n${BIRed}└─ ${Color_Off}\$ "
+  PS1="\[$(tput bold)\]\[$(tput setaf 1)\]┌ \[$(tput sgr0)\][\[$(tput bold)\]\[$(tput setaf 1)\]\u@\h\[$(tput sgr0)\]]-[\[$(tput bold)\]\[$(tput setaf 6)\]\w\[$(tput sgr0)\]]\n\[$(tput bold)\]\[$(tput setaf 1)\]└─ \[$(tput sgr0)\]\$ "
  else
-  PS1="${BIRed}┌ ${BIWhite}[${BIGreen}\u@\h${Color_Off}${BIWhite}]-[${BICyan}\w${Color_Off}${BIWhite}]\n${BIRed}└─ ${Color_Off}\$ "
+  PS1="\[$(tput bold)\]\[$(tput setaf 1)\]┌ \[$(tput sgr0)\][\[$(tput bold)\]\[$(tput setaf 2)\]\u@\h\[$(tput sgr0)\]]-[\[$(tput bold)\]\[$(tput setaf 6)\]\w\[$(tput sgr0)\]]\n\[$(tput bold)\]\[$(tput setaf 1)\]└─ \[$(tput sgr0)\]\$ "
 fi
 
 # Предотвращает случайное удаление файлов.
