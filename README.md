@@ -1,4 +1,4 @@
-![shell_colors][https://github.com/imbicile/shell_colors/raw/master/img.png]
+[[img.png|align=center]]
 
 ## Содержание 
 
