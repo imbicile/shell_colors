@@ -1,4 +1,8 @@
-[[img.png|align=center]]
+<div align="center">
+
+<a href="img.png"><img src="https://github.com/imbicile/shell_colors/raw/master/img.png">
+</a>
+<br>
 
 ## Содержание 
 
