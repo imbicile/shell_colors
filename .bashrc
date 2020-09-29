@@ -83,6 +83,8 @@ HISTSIZE=3000
 HISTFILESIZE=3000
 
 shopt -s checkwinsize
+
+# Автопереход CD
 shopt -s autocd
 
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -100,7 +102,7 @@ fi
 if [ `id -un` = root ]; then
   PS1="┌ [${BIRed}\u${Color_Off}][${BICyan=}\w${Color_Off}]\n└─ \$ "
  else
-PS1="┌ [${BIGreen}\u${Color_Off}][${BICyan}\w${Color_Off}]\n└─ \$ "
+  PS1="┌ [${BIGreen}\u${Color_Off}][${BICyan}\w${Color_Off}]\n└─ \$ "
 fi
 
 # Предотвращает случайное удаление файлов.
@@ -111,7 +113,7 @@ if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 
 # Цвета auto
-alias "ls=ls --color=auto"
+alias ls='ls --color=auto'
 alias dmesg='dmesg --color=auto'
 alias gcc='gcc -fdiagnostics-color=auto'
 alias dir='dir --color=auto'
