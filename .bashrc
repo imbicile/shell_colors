@@ -121,8 +121,6 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 fi
 
-alias meetup="firefox 'https://etherpad.cloud.selectel.org/p/meetup-$(date +%Y-%m-%d)'"
-
 # Раскрашиваем man
 export LESS_TERMCAP_mb=$'\e[0;36m'      # начало мигания (Cyan)
 export LESS_TERMCAP_md=$'\e[1;36m'  	# начало жирного шрифта (BCyan)
