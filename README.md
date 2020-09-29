@@ -1,9 +1,3 @@
-<p align="center">
-<a href="img.png"><img src="https://github.com/imbicile/shell_colors/raw/master/img.png">
-</a>
-<br>
-</p>
-
 ## Содержание 
 
 Ссылка на статью - <https://imbicile.pp.ru/podsvetka-v-bash/>

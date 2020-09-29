@@ -81,7 +81,10 @@ HISTCONTROL=ignoredups:ignorespace
 shopt -s histappend
 HISTSIZE=3000
 HISTFILESIZE=3000
+
 shopt -s checkwinsize
+shopt -s autocd
+
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # Автодополнение bash-completion
@@ -95,16 +98,13 @@ fi
 
 # Задаем приглашение для пользователя и опеределение рута
 if [ `id -un` = root ]; then
-  PS1="\[$(tput bold)\]\[$(tput setaf 1)\]┌ \[$(tput sgr0)\][\[$(tput bold)\]\[$(tput setaf 1)\]\u@\h\[$(tput sgr0)\]]-[\[$(tput bold)\]\[$(tput setaf 6)\]\w\[$(tput sgr0)\]]\n\[$(tput bold)\]\[$(tput setaf 1)\]└─ \[$(tput sgr0)\]\$ "
+  PS1="┌ [${BIRed}\u${Color_Off}][${BICyan=}\w${Color_Off}]\n└─ \$ "
  else
-  PS1="\[$(tput bold)\]\[$(tput setaf 1)\]┌ \[$(tput sgr0)\][\[$(tput bold)\]\[$(tput setaf 2)\]\u@\h\[$(tput sgr0)\]]-[\[$(tput bold)\]\[$(tput setaf 6)\]\w\[$(tput sgr0)\]]\n\[$(tput bold)\]\[$(tput setaf 1)\]└─ \[$(tput sgr0)\]\$ "
+PS1="┌ [${BIGreen}\u${Color_Off}][${BICyan}\w${Color_Off}]\n└─ \$ "
 fi
 
 # Предотвращает случайное удаление файлов.
 alias mkdir='mkdir -p'
-
-# Автопуть
-shopt -s autocd
 
 # Подключаем dircolors
 if [ -x /usr/bin/dircolors ]; then
@@ -120,6 +120,8 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 fi
+
+alias meetup="firefox 'https://etherpad.cloud.selectel.org/p/meetup-$(date +%Y-%m-%d)'"
 
 # Раскрашиваем man
 export LESS_TERMCAP_mb=$'\e[0;36m'      # начало мигания (Cyan)
@@ -140,22 +142,6 @@ alias lu='ls -lur'              # сортировка по времени по�
 alias lr='ls -lR'               # рекурсивный обход подкаталогов
 alias lt='ls -ltr'              # сортировка по дате
 alias lm='ls -al |more'         # вывод через 'more'
-
-# Grc
-alias ping="grc --colour=auto ping"
-alias netstat="grc --colour=auto netstat"
-alias last="grc --colour=auto last"
-alias mount="grc --colour=auto mount"
-alias ps="grc --colour=auto ps"
-alias dig="grc --colour=auto dig"
-alias ifconfig="grc --colour=auto ifconfig"
-alias lspci="grc --colour=auto lspci"
-alias lsblk="grc --colour=auto lsblk"
-alias lsof="grc --colour=auto lsof"
-alias free="grc --colour=auto free"
-alias whois="grc --colour=auto whois"
-alias nmap="grc --colour=auto nmap"
-alias uptime="grc --colour=auto uptime"
 
 # Функция распаковки extract
 function extract {
