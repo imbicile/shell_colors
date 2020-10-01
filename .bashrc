@@ -98,11 +98,19 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Вывод версии ветки в папке git
+parse_git_branch() {
+     # https://stackoverflow.com/questions/4133904/ps1-line-with-git-current-branch-and-colors
+     # git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+     git branch 2> /dev/null | grep "*" | awk '{print "["$2"]"}'
+}
+show_git="${On_Purple}\$(parse_git_branch)${Color_Off}"
+
 # Задаем приглашение для пользователя и опеределение рута
 if [ `id -un` = root ]; then
-  PS1="┌ [${BIRed}\u${Color_Off}][${BICyan=}\w${Color_Off}]\n└─ \$ "
+  PS1="┌ [${BIRed}\u${Color_Off}][${BICyan=}\w${Color_Off}]${show_git}\n└─ \$ "
  else
-  PS1="┌ [${BIGreen}\u${Color_Off}][${BICyan}\w${Color_Off}]\n└─ \$ "
+  PS1="┌ [${BIGreen}\u${Color_Off}][${BICyan}\w${Color_Off}]${show_git}\n└─ \$ "
 fi
 
 # Предотвращает случайное удаление файлов.
