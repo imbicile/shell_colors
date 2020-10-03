@@ -16,8 +16,6 @@ rm shell_color
 ```
 	
 ## Сыылки на источники
-
 1. Файл подсветки ls -	<https://github.com/trapd00r/LS_COLORS>
 2. Список цветов bash -	<https://wiki.archlinux.org/index.php/Bash/Prompt_customization_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)>
 3. Готовые конфигурации bash -	<http://dotshare.it/category/shells/bash/>
-
