@@ -79,7 +79,6 @@ On_IWhite='\e[0;107m'  # White
 # Задаем параметры истории и отображения
 HISTCONTROL=ignoreboth:erasedups
 PROMPT_COMMAND='history -a'
-HISTTIMEFORMAT='%d.%m.%Y %H:%M:%S: '
 HISTSIZE=100000
 HISTFILESIZE=30000
 
