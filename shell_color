@@ -1,8 +1,8 @@
 #!/bin/bash
-cd ~
-dpkg -S nano | grep "\.nanorc$" | awk '{print ("include " $2)}' > ~/.nanorc
+cd ~ || exit
+dpkg -S nano | grep "\.nanorc$" | awk '{print ("include " $2)}' >~/.nanorc
 wget -O ~/.bashrc https://raw.githubusercontent.com/imbicile/shell_colors/master/.bashrc
-wget -O ~/.dircolors https://raw.githubusercontent.com/imbicile/shell_colors/master/.dircolors
+wget -O ~/.dircolors https://raw.githubusercontent.com/imbicile/LS_COLORS/master/LS_COLORS
 echo Copy to root
 sudo cp -v .bashrc .nanorc .dircolors /root/
 echo
