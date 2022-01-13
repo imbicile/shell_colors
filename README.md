@@ -17,9 +17,9 @@ rm shell_color
 
 ```
 wget https://raw.githubusercontent.com/imbicile/shell_colors/master/shell_color_ansible
-chmod +x shell_color
-./shell_color
-rm shell_color
+chmod +x shell_color_ansible
+./shell_color_ansible
+rm shell_color_ansible
 ```
 
 ## Ссылки на источники
