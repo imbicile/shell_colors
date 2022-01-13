@@ -106,10 +106,10 @@ parse_git_branch() {
 show_git="${On_Purple}\$(parse_git_branch)${Color_Off}"
 
 # Задаем приглашение для пользователя и опеределение рута
-if [ $(id -un) = root ]; then
-  PS1="┌ [${BIRed}\u${Color_Off}][${BICyan}\w${Color_Off}]${show_git}\n└─ \$ "
+if [ "$(id -un)" = root ]; then
+  PS1="┌ [${IRed}\u${Color_Off}][${IYellow}\H${Color_Off}][${ICyan}\w${Color_Off}]$show_git\n└─ > "
 else
-  PS1="┌ [${BIGreen}\u${Color_Off}][${BICyan}\w${Color_Off}]${show_git}\n└─ \$ "
+  PS1="┌ [${IGreen}\u${Color_Off}][${IYellow}\H${Color_Off}][${ICyan}\w${Color_Off}]$show_git\n└─ > "
 fi
 
 # Предотвращает случайное удаление файлов.
