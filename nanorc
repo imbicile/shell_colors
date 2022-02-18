@@ -3,9 +3,9 @@ cd /tmp/ || exit
 echo install unzip
 sudo apt install unzip -y
 echo install nanorc
-wget -qO /tmp/master.zip https://github.com/imbicile/nanorc/archive/refs/heads/master.zip
-unzip -o /tmp/master.zip 1>/dev/null
-sudo cp -f /tmp/nanorc-master/*.nanorc /usr/share/nano/
+sudo wget -qO /tmp/master.zip https://github.com/imbicile/nanorc/archive/refs/heads/master.zip
+sudo unzip -o /tmp/master.zip 1>/dev/null
+sudo cp -Rf /tmp/nanorc-master/*.nanorc /usr/share/nano/
 cd ~ || exit
 ls /usr/share/nano/ | grep "\.nanorc$" | awk '{print ("include " "/usr/share/nano/"$1)}' >~/.nanorc
 echo Copy to root and all
