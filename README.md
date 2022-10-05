@@ -15,15 +15,6 @@ chmod +x shell_color
 rm shell_color
 ```
 
-## Установка стиля из [imbicile.environment](https://github.com/imbicile/imbicile.environment)
-
-```bash
-wget https://raw.githubusercontent.com/imbicile/shell_colors/master/shell_color_ansible
-chmod +x shell_color_ansible
-./shell_color_ansible
-rm shell_color_ansible
-```
-
 ## Установка подсветки nanorc из [imbicile.nano](https://github.com/imbicile/imbicile.nano)
 
 ```bash
@@ -32,6 +23,7 @@ chmod +x nanorc
 ./nanorc
 rm nanorc
 ```
+## Для автоматизации установки лучше использовать ansible [imbicile.environment](https://github.com/imbicile/imbicile.environment)
 
 ## Ссылки на источники
 
